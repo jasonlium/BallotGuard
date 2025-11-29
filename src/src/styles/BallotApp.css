@@ -1,0 +1,45 @@
+.ballot-app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem 4rem;
+}
+
+.ballot-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.section-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #0f172a;
+  margin-bottom: 0.75rem;
+}
+
+.poll-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+
+.empty-state {
+  background-color: white;
+  border-radius: 1rem;
+  padding: 2rem;
+  border: 1px dashed #cbd5f5;
+  text-align: center;
+  color: #475569;
+}
+
+.empty-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+@media (min-width: 1024px) {
+  .ballot-layout {
+    grid-template-columns: 380px 1fr;
+  }
+}
