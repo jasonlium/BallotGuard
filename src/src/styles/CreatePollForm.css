@@ -1,0 +1,88 @@
+.create-poll-card {
+  background-color: white;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 10px 15px -3px rgba(15, 23, 42, 0.08);
+}
+
+.create-poll-card h2 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: #0f172a;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.form-row label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #475569;
+  margin-bottom: 0.35rem;
+}
+
+.form-row input,
+.form-row textarea {
+  border: 1px solid #cbd5e1;
+  border-radius: 0.5rem;
+  padding: 0.65rem 0.75rem;
+  font-size: 0.95rem;
+  font-family: inherit;
+}
+
+.options-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.option-input {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.option-input input {
+  flex: 1;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.muted-text {
+  font-size: 0.85rem;
+  color: #94a3b8;
+}
+
+.primary-button {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 9999px;
+  padding: 0.65rem 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.primary-button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.link-button {
+  border: none;
+  background: none;
+  color: #2563eb;
+  font-weight: 600;
+  cursor: pointer;
+}
