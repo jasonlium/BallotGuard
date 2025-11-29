@@ -90,26 +90,34 @@ export function BallotApp() {
       return;
     }
 
-    const hydratedPolls: PollRecord[] = pollResponses.map((response, index) => {
-      const id = pollIds[index] ?? 0;
-      const payload = response as unknown as {
-        result: [string, string, string[], bigint, bigint, boolean, boolean, string];
-      };
-      const [title, description, rawOptions, start, end, finalized, resultsSubmitted, creator] =
-        payload.result;
+    const hydratedPolls: PollRecord[] = pollResponses
+      .map((response, index) => {
+        const id = pollIds[index] ?? 0;
+        const result =
+          Array.isArray(response) && response.length >= 8
+            ? response
+            : (response as { result?: unknown }).result;
 
-      return {
-        id,
-        title,
-        description,
-        options: rawOptions,
-        startTime: Number(start),
-        endTime: Number(end),
-        finalized,
-        resultsSubmitted,
-        creator,
-      };
-    });
+        if (!Array.isArray(result) || result.length < 8) {
+          return null;
+        }
+
+        const [title, description, rawOptions, start, end, finalized, resultsSubmitted, creator] =
+          result as [string, string, string[], bigint, bigint, boolean, boolean, string];
+
+        return {
+          id,
+          title,
+          description,
+          options: rawOptions,
+          startTime: Number(start),
+          endTime: Number(end),
+          finalized,
+          resultsSubmitted,
+          creator,
+        };
+      })
+      .filter((poll): poll is PollRecord => poll !== null);
 
     setPolls(hydratedPolls);
   }, [pollResponses, pollIds]);
