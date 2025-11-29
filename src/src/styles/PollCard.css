@@ -1,0 +1,141 @@
+.poll-card {
+  background-color: white;
+  border-radius: 1rem;
+  border: 1px solid #e2e8f0;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  box-shadow: 0 10px 15px -3px rgba(15, 23, 42, 0.1);
+}
+
+.poll-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.poll-card h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #0f172a;
+}
+
+.status-pill {
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.status-active {
+  background-color: #dcfce7;
+  color: #15803d;
+}
+.status-upcoming {
+  background-color: #dbeafe;
+  color: #1e3a8a;
+}
+.status-finished {
+  background-color: #fee2e2;
+  color: #b91c1c;
+}
+
+.poll-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  font-size: 0.85rem;
+  color: #475569;
+}
+
+.poll-meta span {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.options-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.option-radio {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  color: #0f172a;
+}
+
+.card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.secondary-button,
+.danger-button {
+  border-radius: 9999px;
+  border: none;
+  padding: 0.5rem 1.25rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.secondary-button {
+  background-color: #0f172a;
+  color: white;
+}
+
+.danger-button {
+  background-color: #dc2626;
+  color: white;
+}
+
+.secondary-button:disabled,
+.danger-button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.results-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.result-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  color: #0f172a;
+}
+
+.result-row span:last-child {
+  font-weight: 700;
+}
+
+.helper-text {
+  font-size: 0.85rem;
+  color: #94a3b8;
+}
+
+.chip-stack {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.chip {
+  border-radius: 9999px;
+  padding: 0.2rem 0.65rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  background-color: #e0e7ff;
+  color: #3730a3;
+}
